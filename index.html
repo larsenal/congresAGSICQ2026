@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Congrès de l'AGSICQ 2026 — Aide-mémoire</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rouge: #C0392B;
+    --rouge-clair: #FDECEA;
+    --rouge-medium: #E74C3C;
+    --anthracite: #1C1C1E;
+    --gris-fonce: #2C2C2E;
+    --gris-moyen: #636366;
+    --gris-clair: #AEAEB2;
+    --gris-fond: #F2F2F7;
+    --blanc: #FFFFFF;
+    --bleu-info: #1E6FBA;
+    --bleu-fond: #EAF2FC;
+    --vert: #1A7F4B;
+    --vert-fond: #EAF5EF;
+    --orange: #B45309;
+    --orange-fond: #FEF3C7;
+    --radius: 14px;
+    --radius-sm: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--gris-fond);
+    color: var(--anthracite);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--anthracite);
+    padding: 36px 20px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: var(--rouge);
+    opacity: 0.15;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -50px; left: 40px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: var(--rouge-medium);
+    opacity: 0.1;
+  }
+  .badge-edition {
+    display: inline-block;
+    background: var(--rouge);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+  .header h1 {
+    font-family: 'DM Serif Display', serif;
+    color: #fff;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .header h1 span { color: var(--rouge-medium); font-style: italic; }
+  .header-meta {
+    color: var(--gris-clair);
+    font-size: 13px;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .header-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .header-meta .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--rouge-medium);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  /* NAVIGATION RAPIDE */
+  .nav-rapide {
+    background: var(--blanc);
+    padding: 14px 16px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    border-bottom: 1px solid #E5E5EA;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-rapide::-webkit-scrollbar { display: none; }
+  .nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    background: var(--gris-fond);
+    color: var(--gris-moyen);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    flex-shrink: 0;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-pill:hover, .nav-pill:active {
+    background: var(--rouge);
+    color: #fff;
+  }
+  .nav-pill .icon { font-size: 14px; }
+
+  /* CONTENU */
+  .content { padding: 16px; max-width: 680px; margin: 0 auto; }
+
+  /* BANNIÈRE IMPORTANT */
+  .banniere {
+    background: var(--rouge-clair);
+    border-left: 4px solid var(--rouge);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: var(--rouge);
+    font-weight: 500;
+  }
+
+  /* CARTES DE SECTION */
+  .section {
+    background: var(--blanc);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .section-header {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid #F2F2F7;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .icon-rouge { background: var(--rouge-clair); }
+  .icon-bleu { background: var(--bleu-fond); }
+  .icon-vert { background: var(--vert-fond); }
+  .icon-orange { background: var(--orange-fond); }
+
+  .section-titre {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--anthracite);
+  }
+  .section-sous-titre {
+    font-size: 12px;
+    color: var(--gris-moyen);
+    margin-top: 1px;
+  }
+
+  /* TABLEAU HORAIRE */
+  .horaire-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 14px 18px;
+    border-bottom: 1px solid #F2F2F7;
+    gap: 14px;
+  }
+  .horaire-item:last-child { border-bottom: none; }
+  .horaire-heure {
+    background: var(--gris-fond);
+    border-radius: var(--radius-sm);
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gris-fonce);
+    white-space: nowrap;
+    min-width: 70px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .horaire-heure.actif {
+    background: var(--rouge);
+    color: #fff;
+  }
+  .horaire-detail { flex: 1; }
+  .horaire-titre {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--anthracite);
+    margin-bottom: 2px;
+  }
+  .horaire-note {
+    font-size: 12px;
+    color: var(--gris-moyen);
+  }
+
+  /* LISTE SIMPLE */
+  .liste-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 18px;
+    border-bottom: 1px solid #F2F2F7;
+    gap: 12px;
+  }
+  .liste-item:last-child { border-bottom: none; }
+  .liste-puce {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--rouge);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+  .liste-texte { flex: 1; font-size: 14px; color: var(--anthracite); line-height: 1.5; }
+  .liste-texte strong { font-weight: 600; }
+  .liste-sous { font-size: 12px; color: var(--gris-moyen); margin-top: 2px; }
+
+  /* GRILLE PERSONNES */
+  .personnes-grid {
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .personne-chip {
+    background: var(--gris-fond);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+  }
+  .personne-nom { font-size: 13px; font-weight: 600; color: var(--anthracite); }
+  .personne-role { font-size: 11px; color: var(--gris-moyen); margin-top: 1px; }
+  .personne-badge {
+    display: inline-block;
+    margin-top: 5px;
+    background: var(--rouge-clair);
+    color: var(--rouge);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 20px;
+  }
+
+  /* CODE VESTIMENTAIRE */
+  .code-item {
+    padding: 12px 18px;
+    border-bottom: 1px solid #F2F2F7;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .code-item:last-child { border-bottom: none; }
+  .code-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .tag-oui { background: var(--vert-fond); color: var(--vert); }
+  .tag-non { background: var(--rouge-clair); color: var(--rouge); }
+  .tag-note { background: var(--orange-fond); color: var(--orange); }
+  .code-desc { font-size: 14px; color: var(--anthracite); line-height: 1.5; }
+
+  /* RÉSERVATIONS */
+  .resa-card {
+    margin: 12px 18px;
+    border: 1px solid #E5E5EA;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .resa-top {
+    background: var(--gris-fond);
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .resa-nom { font-size: 14px; font-weight: 600; }
+  .resa-statut {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+  .statut-confirme { background: var(--vert-fond); color: var(--vert); }
+  .statut-attente { background: var(--orange-fond); color: var(--orange); }
+  .resa-details { padding: 10px 14px; }
+  .resa-ligne {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 6px;
+    align-items: flex-start;
+  }
+  .resa-ligne:last-child { margin-bottom: 0; }
+  .resa-label { color: var(--gris-moyen); width: 80px; flex-shrink: 0; }
+  .resa-val { color: var(--anthracite); font-weight: 500; }
+
+  /* CONTACTS */
+  .contact-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-bottom: 1px solid #F2F2F7;
+    gap: 14px;
+    text-decoration: none;
+  }
+  .contact-item:last-child { border-bottom: none; }
+  .contact-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--rouge-clair);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--rouge);
+    flex-shrink: 0;
+  }
+  .contact-info { flex: 1; }
+  .contact-nom { font-size: 14px; font-weight: 600; color: var(--anthracite); }
+  .contact-role { font-size: 12px; color: var(--gris-moyen); }
+  .contact-tel { font-size: 13px; color: var(--bleu-info); margin-top: 2px; }
+  .contact-arrow { color: var(--gris-clair); font-size: 18px; }
+
+  /* PIED DE PAGE */
+  .footer {
+    text-align: center;
+    padding: 28px 20px 40px;
+    color: var(--gris-clair);
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .footer strong { color: var(--gris-moyen); }
+
+  /* ANCHOR OFFSET */
+  .anchor { scroll-margin-top: 60px; }
+
+  @media (max-width: 360px) {
+    .header h1 { font-size: 24px; }
+    .personnes-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     EN-TÊTE — modifier le nom, dates, lieu
+═══════════════════════════════════════ -->
+<div class="header">
+  <div class="badge-edition">Édition 2026</div>
+  <h1>Congrès <span>de l'AGSICQ</span></h1>
+  <div class="header-meta">
+    <span><span class="dot"></span> 22-25 mai 2026</span>
+    <span><span class="dot"></span> Hôtel Universel de Rivière-du-Loup</span>
+    <span><span class="dot"></span> 16 participants</span>
+  </div>
+</div>
+
+<!-- NAVIGATION RAPIDE (barre collante) -->
+<nav class="nav-rapide">
+  <a class="nav-pill" href="#infos"><span class="icon">📋</span> Infos</a>
+  <a class="nav-pill" href="#5a7"><span class="icon">📋</span> 5@7</a>
+  <a class="nav-pill" href="#interieur"><span class="icon">🏢</span> Exposition intérieure</a>
+  <a class="nav-pill" href="#exterieur"><span class="icon">🚒</span> Exposition extérieure</a>
+  <a class="nav-pill" href="#vestimentaire"><span class="icon">👔</span> Code vestimentaire</a>
+  <a class="nav-pill" href="#hotel"><span class="icon">🏨</span> Hôtel</a>
+  <a class="nav-pill" href="#restaurant"><span class="icon">🍽️</span> Repas</a>
+  <a class="nav-pill" href="#equipe"><span class="icon">👥</span> Équipe</a>
+  <a class="nav-pill" href="#contacts"><span class="icon">📞</span> Contacts</a>
+</nav>
+
+<div class="content">
+
+  <!-- ═══════════════════════════════════════
+       BANNIÈRE — message urgent si besoin
+       Supprimer ce bloc si pas de message
+  ═══════════════════════════════════════ -->
+  <div class="banniere" style="margin-top:16px;">
+    ⚠️ Veuillez svp vous référer à ce document en tout temps. Les informations seront continuellement mises à jour.<strong> BON CONGRÈS ! NOUS SOMMES L'ARSENAL !</strong>.
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       INFORMATIONS GÉNÉRALES
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="infos">
+    <div class="section-header">
+      <div class="section-icon icon-bleu">📋</div>
+      <div>
+        <div class="section-titre">Informations générales</div>
+        <div class="section-sous-titre">À lire en premier</div>
+      </div>
+    </div>
+    <div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Lieu :</strong> Hôtel Universel Rivière-du-Loup 311, boul. Hotel-de-Ville Rivière-du-Loup (QC)
+        <div class="liste-sous">Stationnement disponible</div>
+      </div>
+    </div>
+    <div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Dates :</strong> Vendredi 22 mai au lundi 25 mai 2026
+      </div>
+    </div>
+    <div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Nos kiosques :</strong> 13 à 22
+        <div class="liste-sous">Montage : dimanche 24 mai dès 7h — accès au débarcadère à 7h45</div>
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Nos espaces camions :</strong> 1 à 4
+        <div class="liste-sous">Installation : samedi 23 mai dès 9h</div>
+      </div>
+    </div>
+    <div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Démontage :</strong> Lundi 25 mai après 15h
+      </div>
+    </div>
+    <div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Wi-Fi :</strong> Réseau : Informations à venir
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HORAIRE — 5 À 7
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="5a7">
+    <div class="section-header">
+      <div class="section-icon icon-rouge">🏢</div>
+      <div>
+        <div class="section-titre">Déplacement & 5 à 7 L'ARSENAL</div>
+        <div class="section-sous-titre">Logistique de transport</div>
+      </div>
+    </div>
+
+    <!-- VENDREDI -->
+    <div style="padding:10px 18px 4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--rouge);">Vendredi 22 mai</div>
+    <div class="horaire-item">
+      <div class="horaire-heure">09h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Départ de Drummondville</div>
+        <div class="horaire-note">Toute l'équipe</div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Camion échelle :</strong> Louis-David
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Mini Rescue F550 :</strong> Philippe
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>MS1200 :</strong> Alexandre
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>PIC2400 :</strong> Nikolas
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Pick-up blanc avec remorque blanche :</strong> Olivier
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Pick-up noir avec remorque grise :</strong> Marc-André
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure">13h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Montage de la salle pour le 5 à 7</div>
+        <div class="horaire-note">Chapiteau extérieur - L'attribution des tâches sera remise sur place par Marie-Pier</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure actif">16h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Être présents au chapiteau</div>
+<div class="horaire-note">Mots de Marc-André et Louis-David</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">16h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Ouverture des portes du chapiteau pour le 5 à 7</div>
+<div class="horaire-note">Accueil et échange</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">20h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Souper au restaurant Le Mirador</div>
+<div class="horaire-note">Réservation pour 16 pers. au nom de Marie-Pier Dupuis / 10 boulevard Cartier, Rivière-du-Loup (5.6 km de l'Hôtel Universel)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HORAIRE — EXPOSITION INTÉRIEURE
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="interieur">
+    <div class="section-header">
+      <div class="section-icon icon-rouge">🏢</div>
+      <div>
+        <div class="section-titre">Exposition intérieure</div>
+        <div class="section-sous-titre">Équipements sécurité incendie — Kiosques 13 à 22</div>
+      </div>
+    </div>
+
+    <!-- DIMANCHE -->
+    <div style="padding:10px 18px 4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--rouge);">Dimanche 24 mai</div>
+   <div class="horaire-item">
+      <div class="horaire-heure">07h45</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Déchargement et montage kiosque par l'équipe de Satir</div>
+        <div class="horaire-note">Veuillez svp respecter un espace afin que l'équipe de Satir puisse travailler</div>
+      </div>
+    </div>    
+<div class="horaire-item">
+      <div class="horaire-heure">07h45</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Déchargement de notre matériel au débarcadère arrière</div>
+        <div class="horaire-note">Porte #9 (seulement une partie de l'équipe doit être présente)</div>
+  <div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Pick-up blanc :</strong> Daniel
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Pick-up noir :</strong> Stéphane
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Entrer le robot :</strong> À confirmer
+  </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Être au débarcadère pour déchargement :</strong> Charles, Mathieu, Christian, Olivier et Marie-Pier
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure actif">09h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Montage du kiosque et placement de nos équipements</div>
+        <div class="horaire-note">Toute l'équipe doit être présente, à l'exception de l'équipe des camions. L'attribution des tâches sera remise sur place par Marie-Pier</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure">10h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Arrivée des fournisseurs</div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>3M Scott :</strong> Francis Houle
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Textiles Mercedes :</strong> Claude Bérubé
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>National Foam :</strong> Anthony DeAngelis & Rick Isaack
+      </div>
+    </div>
+<div class="liste-item">
+      <div class="liste-puce"></div>
+      <div class="liste-texte">
+        <strong>Paratech :</strong> Alex M Krechowicz
+      </div>
+    </div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">13h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Nettoyage du kiosque</div>
+        <div class="horaire-note">S'assurer que tout est prêt et propre</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">14h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Fermeture de la salle</div>
+       </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">15h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Être présents aux kiosques</div>
+        <div class="horaire-note">Mots de Marie-Pier, Louis-David et Marc-André</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure actif">16h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Ouverture des portes</div>
+        <div class="horaire-note">BON CONGRÈS !</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">18h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Souper - Buffet du congrès de l'AGSICQ</div>
+        <div class="horaire-note">Restaurant La Verrière + Salle Kamouraska</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">21h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Fin de l'exposition intérieure</div>
+      </div>
+    </div>
+
+    <!-- LUNDI -->
+    <div style="padding:10px 18px 4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--rouge);">Lundi 25 mai</div>
+    <div class="horaire-item">
+      <div class="horaire-heure">08h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Nettoyage du kiosque</div>
+<div class="horaire-note">S'assurer que tout est prêt et propre</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure actif">08h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Ouverture des portes</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure">11h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Conférence - National Foam par Rick Isaack (Alexandre)</div>
+<div class="horaire-note">Salle Malécites/Chapais</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">12h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Dîner - Buffet du congrès de l'AGSICQ</div>
+<div class="horaire-note">Restaurant La Verrière + Salle Kamouraska</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure actif">15h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Fin de l'exposition</div>
+<div class="horaire-note">Démontage extérieur et intérieur par toute l'équipe de L'Arsenal</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HORAIRE — EXPOSITION EXTÉRIEURE
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="exterieur">
+    <div class="section-header">
+      <div class="section-icon icon-rouge">🚒</div>
+      <div>
+        <div class="section-titre">Exposition extérieure</div>
+        <div class="section-sous-titre">Camions incendie — Stationnement espaces #1 à #4</div>
+      </div>
+    </div>
+<!-- SAMEDI -->
+    <div style="padding:10px 18px 4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--rouge);">Samedi 23 mai</div>    
+<div class="horaire-item">
+      <div class="horaire-heure">09h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Arrivée et positionnement des camions</div>
+        <div class="horaire-note">Coordonnateur : Alexandre et Louis-David</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure">09h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Nettoyage des camions</div>
+<div class="horaire-note">Par toute l'équipe de L'Arsenal</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure">11h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Dîner - Café Brûlerie RDL</div>
+<div class="horaire-note">Crêpes, sandwiches, salades et soupes | 419, rue Lafontaine, Rivière-du-Loup, QC, Canada, G5R 3B6</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure actif">13h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Début exposition camions</div>
+<div class="horaire-note">BON CONGRÈS !</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">16h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Fin exposition camions</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">19h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Souper au restaurant L'Estaminet</div>
+<div class="horaire-note">Réservation pour 18 pers. au nom de Paméla Bernier | 299 rue Lafontaine, Rivière-du-Loup (2.6 km de l'Hôtel Universel)</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">18h-18h45</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Cocktail d'ouverture - LD et MA</div>
+<div class="horaire-note">Hall de la salle Congrès</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">19h-22h</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Soirée de la présidence - LD et MA</div>
+<div class="horaire-note">Salle Congrès</div>
+      </div>
+    </div>
+ 
+<!-- DIMANCHE -->
+    <div style="padding:10px 18px 4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--rouge);">Dimanche 24 mai</div>    
+<div class="horaire-item">
+      <div class="horaire-heure">07h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Nettoyage des camions et préparer l'espace</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure actif">08h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Début de l'exposition extérieure</div>
+<div class="horaire-note">Personnes présentes : Alexandre, Nikolas, Philippe, Louis-David</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure">11h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Dîner - Boîtes à lunch</div>
+<div class="horaire-note">« Tout sous un même chef »</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">16h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Fin exposition camions</div>
+      </div>
+    </div>    
+<div class="horaire-item">
+      <div class="horaire-heure actif">18h00</div>
+      <div class="horaire-titre">Souper - Buffet du congrès de l'AGSICQ</div>
+        <div class="horaire-note">Restaurant La Verrière + Salle Kamouraska</div>
+      </div>
+    
+
+<!-- LUNDI -->
+    <div style="padding:10px 18px 4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--rouge);">Lundi 25 mai</div>    
+<div class="horaire-item">
+      <div class="horaire-heure">08h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Nettoyage des camions et préparer l'espace</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure actif">08h30</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Début de l'exposition extérieure</div>
+      </div>
+    </div>
+    <div class="horaire-item">
+      <div class="horaire-heure">12h-13h</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Dîner - Buffet du congrès de l'AGSICQ</div>
+<div class="horaire-note">Restaurant La Verrière + Salle Kamouraska</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure actif">15h00</div>
+      <div class="horaire-detail">
+        <div class="horaire-titre">Fin exposition camions</div>
+<div class="horaire-note">Démontage intérieur et extérieur par toute l'équipe de L'Arsenal</div>
+      </div>
+    </div>    
+    </div>  
+
+  <!-- ═══════════════════════════════════════
+       CODE VESTIMENTAIRE
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="vestimentaire">
+    <div class="section-header">
+      <div class="section-icon icon-orange">👔</div>
+      <div>
+        <div class="section-titre">Code vestimentaire</div>
+        <div class="section-sous-titre">Tenue professionnelle requise</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">Vendredi 5@7   </div>
+      <div class="horaire-detail">
+      <div class="code-desc"><strong>Homme :</strong> Chemise noire identifiée L'Arsenal avec pantalon chic</div>
+<div class="code-desc"><strong>Femme :</strong> Robe ou tenue noire</div>
+      </div>
+    </div>  
+<div class="horaire-item">
+      <div class="horaire-heure">Samedi 23 mai  </div>
+      <div class="horaire-detail">
+<div class="code-desc"><strong>Montage camions :</strong> T-shirt sport en sublimation ou t-shirt sport noir + pantalon confortable</div>
+      <div class="code-desc"><strong>Exposition camions :</strong> Polo OGIO rouge</div>
+      <div class="code-desc"><strong>Souper :</strong> Vêtements décontractés, non identifiés L'Arsenal</div>
+      </div>
+    </div>
+<div class="horaire-item">
+      <div class="horaire-heure">Dimanche 24 mai</div>
+      <div class="horaire-detail">
+<div class="code-desc"><strong>Montage kiosques :</strong> T-shirt gris avec logos des fournisseurs + pantalon confortable</div>
+      <div class="code-desc"><strong>Exposition camions et équipement :</strong> Polo OGIO blanc</div>
+      </div>
+    </div> 
+<div class="horaire-item">
+      <div class="horaire-heure">Lundi 25 mai   </div>
+      <div class="horaire-detail">
+      <div class="code-desc"><strong>Exposition camions et équipement :</strong> Polo Under Armour noir</div>
+      </div>
+    </div>  
+<div class="code-item">
+      <span class="code-tag tag-oui">✓ Porter</span>
+      <div class="code-desc">Polo ou chandail avec logo de l'entreprise (fourni)</div>
+    </div>
+
+    <div class="code-item">
+      <span class="code-tag tag-oui">✓ Porter</span>
+      <div class="code-desc">Pantalon de ville foncé (noir ou marine)</div>
+    </div>
+    <div class="code-item">
+      <span class="code-tag tag-oui">✓ Porter</span>
+      <div class="code-desc">Souliers fermés et confortables noirs — journées debout</div>
+    </div>
+    <div class="code-item">
+      <span class="code-tag tag-oui">✓ Porter</span>
+      <div class="code-desc">Corde à badge visible en tout temps au kiosque</div>
+    </div>
+    <div class="code-item">
+      <span class="code-tag tag-non">✗ Éviter</span>
+      <div class="code-desc">Jeans, shorts, espadrilles de sport ou sandales</div>
+    </div>
+    <div class="code-item">
+      <span class="code-tag tag-non">✗ Éviter</span>
+      <div class="code-desc">Vêtements sans logo d'entreprise durant les heures d'exposition</div>
+    </div>
+    <div class="code-item">
+      <span class="code-tag tag-note">📌 Note</span>
+      <div class="code-desc">Pour l'exposition extérieure : veste coupe-vent L'Arsenal si temps froid</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       RÉSERVATIONS HÔTEL
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="hotel">
+    <div class="section-header">
+      <div class="section-icon icon-bleu">🏨</div>
+      <div>
+        <div class="section-titre">Hébergement</div>
+        <div class="section-sous-titre">Réservation de la chambre au nom de la personne en rouge</div>
+      </div>
+    </div>
+    <div class="resa-card">
+      <div class="resa-top">
+        <div class="resa-nom">Hôtel Universel</div>
+        <div class="resa-statut statut-confirme">✓ Confirmé</div>
+      </div>
+      <div class="resa-details">
+        <div class="resa-ligne">
+          <span class="resa-label">Adresse</span>
+          <span class="resa-val">311, boul. Hotel-de-Ville Rivière-du-Loup Quebec G5R 5S4 </span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Arrivée</span>
+          <span class="resa-val">Vendredi 22 mai à partir de 16h00</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Départ</span>
+          <span class="resa-val">Lundi 25 mai avant 11h</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Chambre #1</span>
+          <span class="resa-val" style="color:var(--rouge);">Louis-David Lemaire</span>
+          <span class="resa-val">et Marc-André Lemaire (#1044092752)</span>
+        </div>
+<div class="resa-ligne">
+          <span class="resa-label">Chambre #2</span>
+          <span class="resa-val" style="color:var(--rouge);">Charles Mayer</span>
+          <span class="resa-val">et Lyne Cloutier (#1044092740)</span>
+        </div>
+<div class="resa-ligne">
+          <span class="resa-label">Chambre #3</span>
+          <span class="resa-val" style="color:var(--rouge);">Mélanie Jutras</span>
+          <span class="resa-val">(#592625712)</span>
+        </div>
+<div class="resa-ligne">
+          <span class="resa-label">Chambre #4</span>
+          <span class="resa-val" style="color:var(--rouge);">Marie-Pier Dupuis</span>
+          <span class="resa-val">et Paméla Bernier (#592626281)</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Stationnement</span>
+          <span class="resa-val">Inclus (1 véhicule par chambre)</span>
+        </div>
+ <div class="resa-ligne">
+          <span class="resa-label">Déjeuner</span>
+          <span class="resa-val">Non inclus</span>
+        </div>
+      </div>
+</div>
+ <div class="resa-card">
+      <div class="resa-top">
+        <div class="resa-nom">Hôtel Days Inn by Wyndham</div>
+        <div class="resa-statut statut-confirme">✓ Confirmé</div>
+      </div>
+      <div class="resa-details">
+        <div class="resa-ligne">
+          <span class="resa-label">Adresse</span>
+          <span class="resa-val">182 Rue Fraser, Riviere Du Loup, QC G5R 1C8</span>
+        </div>
+         <div class="resa-ligne">
+          <span class="resa-label">Arrivée</span>
+          <span class="resa-val">Vendredi 22 mai à partir de 16h00</span>
+        </div>
+
+        <div class="resa-ligne">
+
+          <span class="resa-label">Départ</span>
+          <span class="resa-val">Lundi 25 mai avant 12h00</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Chambre #1</span>
+          <span class="resa-val" style="color:var(--rouge);">Christian Hamaoui</span>
+          <span class="resa-val">et Stéphane Blouin (#898434175)</span>
+        </div>
+<div class="resa-ligne">
+          <span class="resa-label">Chambre #2</span>
+          <span class="resa-val" style="color:var(--rouge);">Mathieu Beaurivage</span>
+          <span class="resa-val">et Daniel Thiboutot (#898434155)</span>
+        </div>
+<div class="resa-ligne">
+          <span class="resa-label">Chambre #3</span>
+          <span class="resa-val" style="color:var(--rouge);">Nikolas Bergeron</span>
+          <span class="resa-val">et Olivier Caron (#82939EE042627)</span>
+        </div>
+<div class="resa-ligne">
+          <span class="resa-label">Chambre #4</span>
+          <span class="resa-val" style="color:var(--rouge);">Anne-Marie Morin</span>
+          <span class="resa-val">(#82939EE042626)</span>
+        </div>
+<div class="resa-ligne">
+          <span class="resa-label">Chambre #5</span>
+          <span class="resa-val" style="color:var(--rouge);">Philippe Deslandes</span>
+          <span class="resa-val">et Alexandre Séguin (#898434175)</span>
+        </div>
+
+        <div class="resa-ligne">
+          <span class="resa-label">Stationnement</span>
+          <span class="resa-val">Inclus (1 véhicule par chambre)</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Déjeuner</span>
+          <span class="resa-val">Inclus (Déjeuner continental chaud)</span>
+        </div>
+      </div>
+</div>
+      </div>
+  
+
+  <!-- ═══════════════════════════════════════
+       RÉSERVATIONS RESTAURANT
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="restaurant">
+    <div class="section-header">
+      <div class="section-icon icon-vert">🍽️</div>
+      <div>
+        <div class="section-titre">Repas & Restaurants</div>
+        <div class="section-sous-titre">Réservations de groupe</div>
+      </div>
+    </div>
+
+    <div class="resa-card">
+      <div class="resa-top">
+        <div class="resa-nom">Souper d'équipe — Vendredi 22 mai</div>
+        <div class="resa-statut statut-confirme">✓ Confirmé</div>
+      </div>
+      <div class="resa-details">
+        <div class="resa-ligne">
+          <span class="resa-label">Restaurant</span>
+          <span class="resa-val"><strong>Le Mirador</strong> - <a href="https://www.aubergedelapointe.com/content/file/mirador-2025.pdf" target="_blank" rel="noopener">Consulter le menu</a></span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Heure</span>
+          <span class="resa-val">20h00</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Personnes</span>
+          <span class="resa-val">16 personnes — au nom de Marie-Pier Dupuis</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Adresse</span>
+          <span class="resa-val">10 Boulevard Cartier, Rivière-du-Loup, QC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="resa-card" style="margin-bottom:14px;">
+      <div class="resa-top">
+        <div class="resa-nom">Dîner — Samedi 23 mai</div>
+        <div class="resa-statut statut-confirme">✓ Confirmé</div>
+      </div>
+      <div class="resa-details">
+        <div class="resa-ligne">
+          <span class="resa-label">Restaurant</span>
+          <span class="resa-val"><strong>Café Brûlerie RDL</strong> - <a href="https://www.facebook.com/cafebrulerieRDL?locale=fr_CA" target="_blank" rel="noopener">Consulter la page Facebook</a></span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Heure</span>
+          <span class="resa-val">11h00 — 12h00</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Personnes</span>
+          <span class="resa-val">16 personnes</span>
+        </div>
+<div class="resa-ligne">
+          <span class="resa-label">Adresse</span>
+          <span class="resa-val">419 Rue Lafontaine, Rivière-du-Loup, QC</span>
+        </div>
+      </div>
+    </div>
+<div class="resa-card">
+      <div class="resa-top">
+        <div class="resa-nom">Souper d'équipe avec fournisseurs — Samedi 23 mai</div>
+        <div class="resa-statut statut-confirme">✓ Confirmé</div>
+      </div>
+      <div class="resa-details">
+        <div class="resa-ligne">
+          <span class="resa-label">Restaurant</span>
+          <span class="resa-val"><strong>L'Estaminet</strong> - <a href="https://www.restopubestaminet.com/menus/estam-regulier.pdf" target="_blank" rel="noopener">Consulter le menu</a></span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Heure</span>
+          <span class="resa-val">19h30</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Personnes</span>
+          <span class="resa-val">18 personnes — au nom de Paméla Bernier</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Adresse</span>
+          <span class="resa-val">299 Rue Lafontaine, Rivière-du-Loup, QC</span>
+        </div>
+      </div>
+    </div>  
+<div class="resa-card" style="margin-bottom:14px;">
+      <div class="resa-top">
+        <div class="resa-nom">Dîner — Dimanche 24 mai</div>
+        <div class="resa-statut statut-confirme">✓ Confirmé</div>
+      </div>
+      <div class="resa-details">
+        <div class="resa-ligne">
+          <span class="resa-label">Restaurant</span>
+          <span class="resa-val">Boîtes à lunch de « Tout sous un même chef »</span>
+        </div>
+        <div class="resa-ligne">
+          <span class="resa-label">Heure</span>
+          <span class="resa-val">12h00</span>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!-- ═══════════════════════════════════════
+       ÉQUIPE PRÉSENTE
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="equipe">
+    <div class="section-header">
+      <div class="section-icon icon-rouge">👥</div>
+      <div>
+        <div class="section-titre">Équipe présente</div>
+        <div class="section-sous-titre">16 personnes — 3 jours</div>
+      </div>
+    </div>
+    <div class="personnes-grid">
+      <!-- Ajouter/retirer des personnes selon besoins -->
+      <div class="personne-chip">
+        <div class="personne-nom">Marie-Pier Dupuis</div>
+        <div class="personne-role">Responsable logistique</div>
+        <div class="personne-badge">Coordinatrice</div>
+      </div>
+      <div class="personne-chip">
+        <div class="personne-nom">Alexandre Séguin</div>
+        <div class="personne-role">Directeur des ventes</div>
+      </div>
+      <div class="personne-chip">
+        <div class="personne-nom">Anne-Marie Morin</div>
+        <div class="personne-role">Centre de service équipements</div>
+      </div>
+      <div class="personne-chip">
+        <div class="personne-nom">Christian Hamaoui</div>
+        <div class="personne-role">Ventes</div>
+      </div>
+      <div class="personne-chip">
+        <div class="personne-nom">Charles Mayer</div>
+        <div class="personne-role">Développement des affaires</div>
+      </div>
+      <div class="personne-chip">
+        <div class="personne-nom">Daniel Thiboutot</div>
+        <div class="personne-role">Ventes</div>
+      </div>
+      <div class="personne-chip">
+        <div class="personne-nom">Louis-David Lemaire</div>
+        <div class="personne-role">Direction</div>
+      </div>
+      <div class="personne-chip">
+        <div class="personne-nom">Lyne Cloutier</div>
+        <div class="personne-role">Ventes internes</div>
+      </div>
+      <div class="personne-chip">
+        <div class="personne-nom">Mathieu Beaurivage</div>
+        <div class="personne-role">Ventes</div>
+      </div>
+<div class="personne-chip">
+        <div class="personne-nom">Marc-André Lemaire</div>
+        <div class="personne-role">Direction</div>
+      </div>
+<div class="personne-chip">
+        <div class="personne-nom">Mélanie Jutras</div>
+        <div class="personne-role">Ventes internes</div>
+      </div>
+<div class="personne-chip">
+        <div class="personne-nom">Nikolas Bergeron</div>
+        <div class="personne-role">Ventes</div>
+      </div>
+<div class="personne-chip">
+        <div class="personne-nom">Olivier Caron</div>
+        <div class="personne-role">Marketing</div>
+      </div>
+<div class="personne-chip">
+        <div class="personne-nom">Paméla Bernier</div>
+        <div class="personne-role">Ressources humaines</div>
+      </div>
+<div class="personne-chip">
+        <div class="personne-nom">Philippe Deslandes</div>
+        <div class="personne-role">Chargé projets</div>
+      </div>
+<div class="personne-chip">
+        <div class="personne-nom">Stéphane Blouin</div>
+        <div class="personne-role">Ventes</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CONTACTS CLÉS
+  ═══════════════════════════════════════ -->
+  <div class="section anchor" id="contacts">
+    <div class="section-header">
+      <div class="section-icon icon-bleu">📞</div>
+      <div>
+        <div class="section-titre">Contacts clés</div>
+        <div class="section-sous-titre">En cas de besoin urgent</div>
+      </div>
+    </div>
+    <!-- Modifier les noms, rôles et téléphones -->
+    <a class="contact-item" href="tel:+18198166904">
+      <div class="contact-avatar">MP</div>
+      <div class="contact-info">
+        <div class="contact-nom">Marie-Pier Dupuis</div>
+        <div class="contact-role">Responsable logistique</div>
+        <div class="contact-tel">819 816-6904</div>
+      </div>
+      <div class="contact-arrow">›</div>
+    </a>
+    <a class="contact-item" href="tel:+14188675212">
+      <div class="contact-avatar">ML</div>
+      <div class="contact-info">
+        <div class="contact-nom">Martin Lévesque</div>
+        <div class="contact-role">Électricité - autre que celui du stand</div>
+        <div class="contact-tel">418-867-5212 poste 6638</div>
+      </div>
+      <div class="contact-arrow">›</div>
+    </a>
+    <a class="contact-item" href="tel:+14189344141">
+      <div class="contact-avatar">JD</div>
+      <div class="contact-info">
+        <div class="contact-nom">Jérôme Dumont ou Julie Barette</div>
+        <div class="contact-role">TOP Expo</div>
+        <div class="contact-tel">418-934-4141</div>
+      </div>
+      <div class="contact-arrow">›</div>
+    </a>
+
+<a class="contact-item" href="tel:+14188605342">
+      <div class="contact-avatar">DB</div>
+      <div class="contact-info">
+        <div class="contact-nom">David Beaulieu</div>
+        <div class="contact-role">Responsable - Lavage des camions</div>
+        <div class="contact-tel">418-860-5342</div>
+      </div>
+      <div class="contact-arrow">›</div>
+    </a>
+    <a class="contact-item" href="tel:+18664304982">
+      <div class="contact-avatar" style="background:var(--bleu-fond); color:var(--bleu-info);">HU</div>
+      <div class="contact-info">
+        <div class="contact-nom">Hôtel Universel</div>
+        <div class="contact-role">Réception</div>
+        <div class="contact-tel">1 866 430 4982</div>
+      </div>
+      <div class="contact-arrow">›</div>
+    </a>
+<a class="contact-item" href="tel:+14188626354">
+      <div class="contact-avatar" style="background:var(--bleu-fond); color:var(--bleu-info);">DI</div>
+      <div class="contact-info">
+        <div class="contact-nom">Days Inn by Wyndham</div>
+        <div class="contact-role">Réception</div>
+        <div class="contact-tel">418 862-6354</div>
+      </div>
+      <div class="contact-arrow">›</div>
+    </a>
+    <a class="contact-item" href="tel:+14504646413">
+      <div class="contact-avatar" style="background:var(--vert-fond); color:var(--vert);">IH</div>
+      <div class="contact-info">
+        <div class="contact-nom">Isabelle Harvey</div>
+        <div class="contact-role">Coordonnatrice événements - AGSICQ</div>
+        <div class="contact-tel">450-464-6413, poste 4</div>
+      </div>
+      <div class="contact-arrow">›</div>
+    </a>
+  </div>
+
+</div>
+
+<!-- PIED DE PAGE -->
+<footer class="footer">
+  <strong>Congrès annuel de l'AGSICQ 2026</strong><br>
+  Document mis à jour le 7 mai 2026<br>
+  Pour toute correction : Marie-Pier Dupuis
+</footer>
+
+</body>
+</html>
