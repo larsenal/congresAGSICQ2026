@@ -127,6 +127,23 @@
   .footer{text-align:center;padding:20px 20px 36px;color:var(--gris-clair);font-size:11px;line-height:1.8;}
   .footer strong{color:var(--gris-moyen);}
 
+  /* SPÉCIAUX CONGRÈS */
+  .speciaux-validity{background:var(--vert-fond);border-left:4px solid var(--vert);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+  .speciaux-validity-icon{font-size:20px;flex-shrink:0;}
+  .speciaux-validity-text{font-size:13px;color:var(--vert);font-weight:600;line-height:1.4;}
+  .speciaux-validity-text span{display:block;font-weight:400;color:var(--gris-moyen);font-size:11px;margin-top:2px;}
+  .speciaux-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .speciaux-table{width:100%;border-collapse:collapse;font-size:12px;}
+  .speciaux-table thead tr{background:var(--rouge);color:#fff;}
+  .speciaux-table th{padding:10px 12px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.4px;text-transform:uppercase;white-space:nowrap;}
+  .speciaux-table td{padding:10px 12px;border-bottom:1px solid #F2F2F7;vertical-align:top;color:var(--anthracite);}
+  .speciaux-table tr:last-child td{border-bottom:none;}
+  .speciaux-table tr:nth-child(even) td{background:#FAFAFA;}
+  .speciaux-table .col-id{font-family:monospace;font-size:11px;color:var(--gris-moyen);white-space:nowrap;font-weight:600;}
+  .speciaux-table .col-prix{font-weight:700;color:var(--rouge);white-space:nowrap;text-align:right;}
+  .speciaux-table th:last-child{text-align:right;}
+  .speciaux-note{padding:10px 16px;font-size:11px;color:var(--gris-moyen);border-top:1px solid #F2F2F7;text-align:center;}
+
   @media(max-width:360px){
     .header h1{font-size:22px;}
     .personnes-grid{grid-template-columns:1fr;}
@@ -193,6 +210,11 @@
       <div class="tile-label">Équipe</div>
       <div class="tile-sub">16 personnes</div>
     </div>
+    <div class="home-tile" onclick="showPage('speciaux')" style="grid-column:span 2;background:linear-gradient(135deg,#FFF5F5 0%,#FDECEA 100%);border:2px solid var(--rouge);">
+      <div class="tile-icon">🏷️</div>
+      <div class="tile-label" style="color:var(--rouge);">Spéciaux du congrès</div>
+      <div class="tile-sub">Prix spéciaux AGSICQ 2026</div>
+    </div>
     <div class="home-tile" onclick="showPage('contacts')" style="grid-column:span 2;">
       <div class="tile-icon">📞</div>
       <div class="tile-label">Contacts clés</div>
@@ -201,7 +223,7 @@
   </div>
   <div class="footer">
     <strong>Congrès annuel de l'AGSICQ 2026</strong><br>
-    Document mis à jour le 11 mai 2026<br>
+    Document mis à jour le 20 mai 2026<br>
     Pour toute correction : Marie-Pier Dupuis
   </div>
 </div>
@@ -242,7 +264,7 @@
       <div class="horaire-heure">09h00</div>
       <div class="horaire-detail">
         <div class="horaire-titre">Départ de Drummondville — Toute l'équipe</div>
-<div class="horaire-note"><strong>Camion échelle :</strong> Louis-David<br><strong>Mini Rescue F550 :</strong> Philippe<br><strong>MS1200 :</strong> Alexandre<br><strong>PIC2400 :</strong> Nikolas<br><strong>Pick-up blanc + remorque blanche :</strong> Olivier<br><strong>Pick-up noir + remorque grise :</strong> Marc-André</div>
+<div class="horaire-note"><strong>Camion échelle :</strong> Louis-David<br><strong>Mini Rescue F550 :</strong> Philippe<br><strong>MS1200 :</strong> Alexandre et Anne-Marie<br><strong>PT1700 :</strong> Nikolas<br><strong>Pick-up blanc + traileur :</strong> Olivier<br><strong>Pick-up noir + remorque grise :</strong> Marc-André</div>
       </div>        
     </div>
     <div class="horaire-item">
@@ -299,7 +321,7 @@
       <div class="horaire-heure">07h45</div>
       <div class="horaire-detail">
         <div class="horaire-titre">Déchargement matériel — Porte #9 (débarcadère arrière)</div>
-        <div class="horaire-note"><strong>Pick-up blanc :</strong> Daniel<br><strong>Pick-up noir :</strong> Stéphane<br><strong>Entrer le robot :</strong> À confirmer<br><strong>Être présents débarcadère :</strong> Charles, Mathieu, Christian, Olivier et Marie-Pier<br></div>
+        <div class="horaire-note"><strong>Pick-up blanc :</strong> Daniel<br><strong>Pick-up noir :</strong> Stéphane<br><strong>Être présents débarcadère :</strong> Charles, Mathieu, Christian, Olivier et Marie-Pier<br></div>
       </div>
     </div>
     <div class="horaire-item">
@@ -506,7 +528,7 @@
       <div class="horaire-heure">Ven. 22 mai</div>
       <div class="horaire-detail">
         <div class="horaire-titre">5 à 7</div>
-        <div class="horaire-note"><strong>Homme :</strong> Chemise noire identifiée L'Arsenal + pantalon chic<br><strong>Femme :</strong> Robe ou tenue noire</div>
+        <div class="horaire-note"><strong>Homme :</strong> Chemise noire identifiée L'Arsenal + pantalon chic<br><strong>Femme :</strong> Robe ou tenue noire avec foulard rouge</div>
       </div>
     </div>
     <div class="horaire-item">
@@ -545,10 +567,10 @@
     <div class="code-item"><span class="code-tag tag-oui">✓ Porter</span><div class="code-desc">Polo ou chandail avec logo de l'entreprise (fourni)</div></div>
     <div class="code-item"><span class="code-tag tag-oui">✓ Porter</span><div class="code-desc">Pantalon de ville foncé (noir ou marine)</div></div>
     <div class="code-item"><span class="code-tag tag-oui">✓ Porter</span><div class="code-desc">Souliers fermés et confortables noirs — journées debout</div></div>
-    <div class="code-item"><span class="code-tag tag-oui">✓ Porter</span><div class="code-desc">Corde à badge visible en tout temps au kiosque</div></div>
+    <div class="code-item"><span class="code-tag tag-oui">✓ Porter</span><div class="code-desc">Corde à badge L'Arsenal visible en tout temps au kiosque</div></div>
     <div class="code-item"><span class="code-tag tag-non">✗ Éviter</span><div class="code-desc">Jeans, shorts, espadrilles de sport ou sandales</div></div>
     <div class="code-item"><span class="code-tag tag-non">✗ Éviter</span><div class="code-desc">Vêtements sans logo d'entreprise durant les heures d'exposition</div></div>
-    <div class="code-item"><span class="code-tag tag-note">📌 Note</span><div class="code-desc">Exposition extérieure : veste coupe-vent L'Arsenal si temps froid</div></div>
+    <div class="code-item"><span class="code-tag tag-note">📌 Note</span><div class="code-desc">Exposition extérieure : veste ou petit manteau L'Arsenal si temps froid</div></div>
   </div>
 </div>
 
@@ -700,6 +722,166 @@
     <a class="contact-item" href="tel:+14188626354"><div class="contact-avatar" style="background:var(--bleu-fond);color:var(--bleu-info);">DI</div><div class="contact-info"><div class="contact-nom">Days Inn by Wyndham</div><div class="contact-role">Réception</div><div class="contact-tel">418 862-6354</div></div><div class="contact-arrow">›</div></a>
     <a class="contact-item" href="tel:+14504646413"><div class="contact-avatar" style="background:var(--vert-fond);color:var(--vert);">IH</div><div class="contact-info"><div class="contact-nom">Isabelle Harvey</div><div class="contact-role">Coordonnatrice événements — AGSICQ</div><div class="contact-tel">450-464-6413 poste 4</div></div><div class="contact-arrow">›</div></a>
   </div>
+</div>
+
+<!-- PAGE SPÉCIAUX CONGRÈS -->
+<div class="page" id="page-speciaux">
+  <div class="back-bar">
+    <button class="back-btn" onclick="showPage('home')">← Retour</button>
+    <span class="page-title">Spéciaux du congrès</span>
+  </div>
+
+  <div class="speciaux-validity">
+    <div class="speciaux-validity-icon">✅</div>
+    <div class="speciaux-validity-text">
+      Valide du 23 mai au 12 juin 2026
+      <span>Prix spéciaux réservés aux membres — Congrès annuel de l'AGSICQ 2026</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-rouge">🏷️</div>
+      <div><div class="section-titre">Prix spéciaux AGSICQ 2026</div><div class="section-sous-titre">Valide du 23 mai au 12 juin 2026</div></div>
+    </div>
+    <div class="speciaux-table-wrap">
+      <table class="speciaux-table">
+        <thead>
+          <tr>
+            <th>ID Stock</th>
+            <th>Description</th>
+            <th>Prix unitaire</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr>
+            <td class="col-id">MTS1.75X50-04NPSHRI</td>
+            <td style="color:var(--gris-moyen);">Boyau Mercedes MTSS 800 1.75'' x 50' jaune avec raccords NPSH et Identify</td>
+            <td class="col-prix">230.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">MTS2.5X50-04QST</td>
+            <td style="color:var(--gris-moyen);">Boyau Mercedes MTSS 800 2.5" x 50' raccords QST, couleur jaune</td>
+            <td class="col-prix">316.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">KRA2.5X50-04QSTWG</td>
+            <td style="color:var(--gris-moyen);">Boyau Mercedes Kraken 2.5'' x 50' raccord QST, couleur jaune avec wayout or</td>
+            <td class="col-prix">459.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">KRA2.5X50-08QSTWG</td>
+            <td style="color:var(--gris-moyen);">Boyau Mercedes Kraken 2.5" x 50' raccords QST, couleur rouge avec way out or</td>
+            <td class="col-prix">459.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">HD395142</td>
+            <td style="color:var(--gris-moyen);">Cagoule LION antiparticule RedZone™ avec Stedair Prevent, noir / <strong>*À l'achat de 10 et plus.</strong></td>
+            <td class="col-prix">165.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">HD395143</td>
+            <td style="color:var(--gris-moyen);">Cagoule LION antiparticule RedZone™ sans PFAS Stedair Prevent Clear, Noir / <strong>*À l'achat de 10 et plus.</strong></td>
+            <td class="col-prix">187.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">HD396142</td>
+            <td style="color:var(--gris-moyen);">Cagoule LION antiparticule RedZone™ sans PFAS Dupont Nomex Nano, noir / <strong>*À l'achat de 10 et plus.</strong></td>
+            <td class="col-prix">187.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">HD395146</td>
+            <td style="color:var(--gris-moyen);">Cagoule LION antiparticule RedZone™ Stedair Prevent, tan/gris / <strong>*À l'achat de 10 et plus.</strong></td>
+            <td class="col-prix">166.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">HD396142</td>
+            <td style="color:var(--gris-moyen);">Cagoule LION antiparticule RedZone™ sans PFAS Dupont Nomex Nano, noir / <strong>*À l'achat de 10 et plus.</strong></td>
+            <td class="col-prix">187.00$</td>
+          </tr>
+          <tr>
+            <td class="col-id">RFDS-424</td>
+            <td style="color:var(--gris-moyen);">Casier auto-portant double /1 module de 4 sections de 24" - <strong> Seulement 2 en stock</strong></td>
+            <td class="col-prix">2,100.00$</td>
+          </tr>
+          <tr>
+            <td class="col-id">RMSS-3-24</td>
+            <td style="color:var(--gris-moyen);">Casier mobile 3 sections de 24" - <strong> Seulement 1 en stock</strong></td>
+            <td class="col-prix">1,640.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">PXSSRDR350726B</td>
+            <td style="color:var(--gris-moyen);">Casque Bullard PX rouge, visiere Retrak (R350), R726 noir</td>
+            <td class="col-prix">470.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">LTXRDR330726B</td>
+            <td style="color:var(--gris-moyen);">Casque Bullard LTX rouge, visiere ext 4" (R330), R726 noir</td>
+            <td class="col-prix">370.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">PXSYLR330726B</td>
+            <td style="color:var(--gris-moyen);">Casque Bullard PX jaune, visiere exterieur 4" (R330), R726 noir</td>
+            <td class="col-prix">437.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">LTXORR330726B</td>
+            <td style="color:var(--gris-moyen);">Casque Bullard LTX orange, visiere ext 4" (R330), R726 noir</td>
+            <td class="col-prix">250.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">AVD-LARGE</td>
+            <td style="color:var(--gris-moyen);">Couverture AVD contre les feux de batteries - large (20’ x 26’)</td>
+            <td class="col-prix">4,840.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">777YL</td>
+            <td style="color:var(--gris-moyen);">High rise bag 22oz w/tuff bottom</td>
+            <td class="col-prix">300.00$</td>
+          </tr>
+<tr>
+            <td class="col-id">TD-11740</td>
+            <td style="color:var(--gris-moyen);">Bas Dristex offert à l'achat d'une botte QR14</td>
+            <td class="col-prix">Offert</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="speciaux-note"><span style="color:var(--rouge);font-weight:600;">* Prix valides uniquement pour les quantités en inventaire.</span> Pour toute question, contacter Alexandre Séguin.</div>
+  </div>
+<div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-rouge">🏷️</div>
+      <div><div class="section-titre">Défi du congrès</div><div class="section-sous-titre">Let's GO!</div></div>
+    </div>
+    <div class="resa-card">
+      <div class="resa-top"><div class="resa-nom">Vendre les casques LTX orange en liquidation</div></div>
+      <div class="resa-details">
+        <div class="resa-ligne"><span class="resa-label">ID Stock</span><span class="resa-val">LTXORR330726B</span></div>
+        <div class="resa-ligne"><span class="resa-label">Qté stock</span><span class="resa-val">17</span></div>
+        <div class="resa-ligne"><span class="resa-label"></span><span class="resa-val">Qté min de 5 vendu par représentant</span></div>
+        <div class="resa-ligne"><span class="resa-label"></span><span class="resa-val"><span style="color:var(--rouge);font-weight:600;">Prix agressif → 250.00$/ch</span> </span></div>
+        <div class="resa-ligne"><span class="resa-label"></span><span class="resa-val">Le + de vente obtient:<span style="color:var(--rouge);font-weight:600;"> 50.00$ en carte cadeau</span> (si vendu après le congrès, carte cadeau séparée avec CSR)</span></div>
+      </div>      
+    </div>
+<div class="resa-card">
+      <div class="resa-top"><div class="resa-nom">Vendre les sacs High Rise</div></div>
+      <div class="resa-details">
+        <div class="resa-ligne"><span class="resa-label">ID Stock</span><span class="resa-val">777YL</span></div>
+        <div class="resa-ligne"><span class="resa-label">Qté stock</span><span class="resa-val">6</span></div>
+        <div class="resa-ligne"><span class="resa-label"></span><span class="resa-val"><span style="color:var(--rouge);font-weight:600;">Prix agressif → 300.00$/ch</span> </span></div>
+        <div class="resa-ligne"><span class="resa-label"></span><span class="resa-val"><span style="color:var(--rouge);font-weight:600;"> 25.00$ en carte cadeau</span> par sac vendu</span></div>
+    </div>        
+    </div>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-rouge">🏷️</div>
+      <div><div class="section-titre">Items en solde</div><div class="section-sous-titre">Affichés sur notre site web - <a href="https://larsenal.ca/nos-produits/cmp-mayer/?cat=liquidation-cmp-mayer" target="_blank">Consulter la page</a></div></div>
+    </div>
+    </span></div>
+    </div>
+  </div>
+</div>
 </div>
 
 <script>
